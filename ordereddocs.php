@@ -13,7 +13,7 @@ include 'connecttodb.php';
 <?php
 
 if (isset($_POST['submit'])) { 
-	if(isset($_POST['radio'])=='First Name Increasing') {
+	if(($_POST['radio'])=='First Name Increasing') {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName ASC';
 		$result = mysqli_query($connection,$query);
@@ -33,7 +33,7 @@ if (isset($_POST['submit'])) {
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
 	}
 	
-	if(isset($_POST['radio'])=='First Name Decreasing') {
+	if(($_POST['radio'])=='First Name Decreasing') {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName DESC';
 		$result = mysqli_query($connection,$query);
@@ -53,7 +53,7 @@ if (isset($_POST['submit'])) {
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
 	}
 
-	if(isset($_POST['radio'])=='Last Name Increasing') {
+	if(($_POST['radio'])=='Last Name Increasing') {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY lastName ASC';
 		$result = mysqli_query($connection,$query);
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
 	}
 
-	if(isset($_POST['radio'])=='Last Name Decreasing') {
+	if(($_POST['radio'])=='Last Name Decreasing') {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY lastName DESC';
 		$result = mysqli_query($connection,$query);
