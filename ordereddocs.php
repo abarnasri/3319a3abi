@@ -14,7 +14,7 @@ include 'connecttodb.php';
 
 if (isset($_POST['submit'])) { 
 	if(($_POST['radio'])=='First Name Increasing') {
-		<form action="displaydocinfo.php" method="post">;
+		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName ASC';
 		$result = mysqli_query($connection,$query);
 		if (!$result) {
@@ -30,6 +30,7 @@ if (isset($_POST['submit'])) {
 		mysqli_free_result($result);
 		echo "</ol>";
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
+		echo '</form>';
 	}
 	
 
