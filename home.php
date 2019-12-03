@@ -1,3 +1,7 @@
+<?php
+	session_start();
+	include_once 'connecttodb.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +12,11 @@
 <?php
 include 'connecttodb.php';
 ?>
+<h1> Abarna's Doctor Database </h1>
+
+
 <br>
 Order Doctors by: <br>
-<br>
-<br>
 <br>
 <form action="ordereddocs.php" method="post">
 <form action="#" method="post">
@@ -27,6 +32,7 @@ Order Doctors by: <br>
 <?php 
 include'ordereddocs.php'; 
 ?>
+<form>
 <input name="submit" type="submit" value="Order Doctors">
 </form>
 
