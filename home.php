@@ -20,13 +20,13 @@ Order Doctors by:
 <br>
 <form action="ordereddocs.php" method="post">
 <br>
-<input name="radio" type="radio" value="First Name Increasing">First Name Increasing
+<input name="radio1" type="radio" value="First Name Increasing">First Name Increasing
 <br>
-<input name="radio" type="radio" value="First Name Decreasing">First Name Decreasing
+<input name="radio2" type="radio" value="First Name Decreasing">First Name Decreasing
 <br>
-<input name="radio" type="radio" value="First Name Ascending">Last Name Increasing
+<input name="radio3" type="radio" value="First Name Ascending">Last Name Increasing
 <br>
-<input name="radio" type="radio" value="First Name Descending">Last Name Decreasing
+<input name="radio4" type="radio" value="First Name Descending">Last Name Decreasing
 <br>
 <?php 
 include'ordereddocs.php'; 
