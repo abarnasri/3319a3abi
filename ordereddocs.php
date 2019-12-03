@@ -13,7 +13,7 @@ include 'connecttodb.php';
 <?php
 
 if (isset($_POST['submit'])) { 
-	if(isset($_POST['radio'])) {
+	if(isset($_POST['radio1'])) {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName ASC';
 		$result = mysqli_query($connection,$query);
@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 	}
 	
 
-	if(isset($_POST['radio'])) {
+	if(isset($_POST['radio2'])) {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName DESC';
 		$result = mysqli_query($connection,$query);
@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
 		echo '</form>';
 	}
 
-	if(isset($_POST['radio'])) {
+	if(isset($_POST['radio3'])) {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY lastName ASC';
 		$result = mysqli_query($connection,$query);
@@ -74,7 +74,7 @@ if (isset($_POST['submit'])) {
 		echo '</form>';
 	}
 
-	if(isset($_POST['radio'])) {
+	if(isset($_POST['radio4'])) {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY lastName DESC';
 		$result = mysqli_query($connection,$query);
