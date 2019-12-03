@@ -29,7 +29,7 @@ if (isset($_POST['submit'])) {
 		}
 		mysqli_free_result($result);
 		echo "</ol>";
-		<input type="submit" value="Display Doctor Info">;
+		echo '<input name="submit" type="submit" value="Display Doctor Info">;
 		echo '</form>';
 	}
 	
