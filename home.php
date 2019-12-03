@@ -16,7 +16,7 @@ include 'connecttodb.php';
 
 
 <br>
-Order Doctors by: <br>
+Order Doctors by:
 <br>
 <form action="ordereddocs.php" method="post">
 <br>
