@@ -29,6 +29,9 @@ if (isset($_POST['submit'])) {
 		}
 		mysqli_free_result($result);
 		echo "</ol>";
+		echo '<?php'
+		echo 'include'displaydocinfo.php'; 
+		echo '?>';
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
 	}
 	
