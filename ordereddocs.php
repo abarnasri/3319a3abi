@@ -31,7 +31,7 @@ if (isset($_POST['submit'])) {
 		echo "</ol>";
 		echo '<form>';
 		echo '<input name="submit" type="submit" value="Display Doctor Info">;
-		echo '</form>';
+		echo '<form>';
 	}
 	
 	if(isset($_POST['radio'])=='First Name Decreasing') {
