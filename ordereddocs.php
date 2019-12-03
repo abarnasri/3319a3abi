@@ -95,11 +95,5 @@ if (isset($_POST['submit'])) {
 	}
 }
 ?>
-<?php 
-include'displaydocinfo.php'; 
-?>
-<form>
-<input name="submit" type="submit" value="Get Doc Info">
-</form>
 </body>
 </html>
