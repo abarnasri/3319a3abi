@@ -11,6 +11,7 @@ include 'connecttodb.php';
 <h1>Doctor Information:</h1>
 <ol>
 <?php
+	if (isset($_POST['submit'])){
 	$docLicenseNum= $_POST["doctors"];
 	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.licenseNum="' . $docLicenseNum. '"';
 	$result=mysqli_query($connection,$query);
@@ -23,6 +24,7 @@ include 'connecttodb.php';
 		echo '<img src="'.$row["docimage"].'" height="80" width="80">';
 	}
 	mysqli_free_result($result);
+	}
 ?>
 </ol>
 <?php
