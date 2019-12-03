@@ -34,7 +34,7 @@ if (isset($_POST['submit'])) {
 	}
 	
 
-	if(($_POST['radio'])=='First Name Descending') {
+	if(($_POST['radio'])=='First Name Decreasing') {
 		echo '<form action="displaydocinfo.php" method="post">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName DESC';
 		$result = mysqli_query($connection,$query);
