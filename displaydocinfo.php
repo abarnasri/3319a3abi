@@ -13,7 +13,7 @@ include 'connecttodb.php';
 <?php
 	if (isset($_POST['submit'])){
 	$docLicenseNum= $_POST['submit];
-	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.licenseNum="' . $docLicenseNum. '"';
+	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.docLicNum="' . $docLicenseNum. '"';
 	$result=mysqli_query($connection,$query);
 	if (!$result) {
 		die("Database query failed.");
