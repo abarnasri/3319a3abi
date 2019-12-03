@@ -19,7 +19,6 @@ include 'connecttodb.php';
 Order Doctors by: <br>
 <br>
 <form action="ordereddocs.php" method="post">
-<form action="#" method="post">
 <br>
 <input name="radio" type="radio" value="First Name Increasing">First Name Increasing
 <br>
