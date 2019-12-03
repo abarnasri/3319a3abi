@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
 		echo "<ol>";
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<br>";
-			echo '<input type="radio" name="doctors" value="';
+			echo '<input type="radio" name="doctors" value=""';
 			echo $row["licenseNum"];
 			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
 		}
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 		echo "<ol>";
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<br>";
-			echo '<input type="radio" name="doctors" value="';
+			echo '<input type="radio" name="doctors" value=""';
 			echo $row["licenseNum"];
 			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
 		}
@@ -83,7 +83,7 @@ if (isset($_POST['submit'])) {
 		echo "<ol>";
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<br>";
-			echo '<input type="radio" name="doctors" value="';
+			echo '<input type="radio" name="doctors" value=""';
 			echo $row["licenseNum"];
 			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
 		}
