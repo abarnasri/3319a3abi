@@ -61,11 +61,8 @@ Add Image of Doctor:
 
 
 <br>
-<b>All Doctors With No Patients </b>
 <form action="nopatientsdoc.php" method="post">
-<form>
-<input type="submit" name="nopatients" value="Get Doctors">
-</form>
+<b>All Doctors With No Patients </b> <form> <input type="submit" name="nopatients" value="Get Doctors"></form>
 	
 	
 
