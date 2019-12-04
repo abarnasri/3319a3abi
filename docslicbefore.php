@@ -24,7 +24,7 @@ include 'connecttodb.php';
 	//go through each row and print out the necessary information
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<li>";
-		echo "<b>Doctor Name:</b>" . $row["firstName"] . " " . $row["lastName"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . " " . "<b>License Date: </b>" . " " . $row["licenseDate"] . "</li>"; 
+		echo "<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] . " " . "<b>Speciality: </b>" . " " . $row["speciality"] . " " . "<b>License Date: </b>" . " " . $row["licenseDate"] . "</li>"; 
 		echo '<img src="'.$row["docimage"].'" height="400" width="400">';
 	}
 	mysqli_free_result($result);
