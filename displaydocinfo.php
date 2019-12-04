@@ -12,7 +12,7 @@ include 'connecttodb.php';
 <ol>
 <?php
 	if (isset($_POST['getinfo'])){
-	$docLicenseNum= $_POST['getinfo];
+	$docLicenseNum= $_POST['getinfo'];
 	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.docLicNum="' . $docLicenseNum. '"';
 	$result=mysqli_query($connection,$query);
 	if (!$result) {
