@@ -94,5 +94,9 @@ if (isset($_POST['submit'])) {
 	}
 }
 ?>
+<?php
+   mysqli_close($connection);
+?>
+	
 </body>
 </html>
