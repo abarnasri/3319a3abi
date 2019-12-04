@@ -10,8 +10,8 @@ include 'connecttodb.php';
 ?>
 
 <php?
-	if (isset($_POST['info'])){
-		$docinfo = $_POST['info'];
+	if (isset($_POST['getinfo'])){
+		$docinfo = $_POST['getinfo'];
 			$query = 'SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt = hospital.hosCode AND doctor.docLicNum ="'.$docinfo. '"';
 			$result=mysqli_query($connection,$query);
 		if (!$result) {
