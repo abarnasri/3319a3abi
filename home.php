@@ -25,9 +25,7 @@ Order Doctors by:
 <br>
 <input name="radio" type="radio" value='Last Name Descending'>Last Name Decreasing
 <br>
-<?php 
-include'ordereddocs.php'; 
-?>
+
 <form>
 <input name="submit" type="submit" value="Order Doctors">
 </form>
