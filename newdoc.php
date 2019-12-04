@@ -20,8 +20,11 @@ include 'connecttodb.php';
 	$licNum = $_POST["LicenNum"];
 	$hosp = $_POST["hosp"];
 	//do query
-	
-	
+	$query1 = 'SELECT * FROM doctor';
+	$result1=mysqli_query($connection,$query1);
+	if (!$result1) {
+		die("Database query failed.");
+	}
 	$query2 = 'INSERT INTO doctor VALUES("' . $licNum . '","' . $firstName . '","' . $lastName . '","' . $speciality . '", "' . $date . '", "'. $hosp .'", "' .$docimage. '")';
 	$result2=mysqli_query($connection,$query2);
 	//if query fails
