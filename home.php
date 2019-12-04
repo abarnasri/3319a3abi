@@ -10,8 +10,10 @@
 </head>
 <body>
 <h1> Abarna's Doctor Database </h1>
+
+//list doctors in ascending/descending by first/last name
 <br>
-	<b>Order Doctors by:</b>
+<b>Order Doctors by:</b>
 <form action="ordereddocs.php" method="post">
 <input name="radio" type="radio" value='First Name Increasing'>First Name Increasing
 <br>
@@ -26,8 +28,9 @@
 <input name="submit" type="submit" value="Order Doctors">
 </form>
 
+//get all doctors licensed before specified date
 <br>
-	<b>Doctors Licensed Before A Certain Date</b>
+<b>Doctors Licensed Before A Certain Date</b>
 <form action="docslicbefore.php" method="post">
 Enter Date (YYYY-MM-DD): <input type="text" name="date">
 <br>
@@ -35,8 +38,9 @@ Enter Date (YYYY-MM-DD): <input type="text" name="date">
 <input type="submit" value="Get Doctors Before This Date">
 </form>
 	
+//add new doctor
 <br>
-	<b>Enter New Doctor </b>
+<b>Enter New Doctor </b>
 <form action="newdoc.php" method="post" enctype="multipart/form-data">
 First Name: <input type="text" name="first">
 <br>
@@ -60,6 +64,7 @@ Add Image of Doctor:
 </form>
 
 
+//list doctors that have no patients
 <br>
 <form action="nopatientsdoc.php" method="post">
 <b>All Doctors With No Patients </b> <form> <input type="submit" name="nopatients" value="Get Doctors"></form>
