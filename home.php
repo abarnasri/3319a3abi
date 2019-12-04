@@ -19,9 +19,9 @@ Order Doctors by:
 <br>
 <input name="radio" type="radio" value='First Name Decreasing'>First Name Decreasing
 <br>
-<input name="radio" type="radio" value='Last Name Ascending'>Last Name Increasing
+<input name="radio" type="radio" value='Last Name Increasing'>Last Name Increasing
 <br>
-<input name="radio" type="radio" value='Last Name Descending'>Last Name Decreasing
+<input name="radio" type="radio" value='Last Name Decreasing'>Last Name Decreasing
 <br>
 
 <form>
