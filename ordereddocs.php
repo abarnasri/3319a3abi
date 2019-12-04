@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 		mysqli_free_result($result);
 		echo "</ol>";
 		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="submit" type="submit" value="Display Doctor Info">';
+		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
 	}
 	
 	if(($_POST['radio'])=='First Name Decreasing') {
@@ -50,7 +50,7 @@ if (isset($_POST['submit'])) {
 		mysqli_free_result($result);
 		echo "</ol>";
 		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="submit" type="submit" value="Display Doctor Info">';
+		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
 	}
 
 	if(($_POST['radio'])=='Last Name Increasing') {
@@ -70,7 +70,7 @@ if (isset($_POST['submit'])) {
 		mysqli_free_result($result);
 		echo "</ol>";
 		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="submit" type="submit" value="Display Doctor Info">';
+		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
 	}
 
 	if(($_POST['radio'])=='Last Name Decreasing') {
@@ -90,7 +90,7 @@ if (isset($_POST['submit'])) {
 		mysqli_free_result($result);
 		echo "</ol>";
 		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="submit" type="submit" value="Display Doctor Info">';
+		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
 	}
 }
 ?>
