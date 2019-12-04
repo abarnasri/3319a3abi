@@ -25,6 +25,7 @@ include 'connecttodb.php';
 	if (!$result1) {
 		die("Database query failed.");
 	}
+	$row=mysqli_fetch_assoc($result1);
 	$query2 = 'INSERT INTO doctor VALUES("' . $licNum . '","' . $firstName . '","' . $lastName . '","' . $speciality . '", "' . $date . '", "'. $hosp .'", "' .$docimage. '")';
 	$result2=mysqli_query($connection,$query2);
 	//if query fails
