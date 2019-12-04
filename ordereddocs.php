@@ -12,87 +12,48 @@ include 'connecttodb.php';
 
 <?php
 
-if (isset($_POST['submit'])) { 
-	if(($_POST['radio'])=='First Name Increasing') {
-		echo '<form action="displaydocinfo.php" method="POST">';
-		$query = 'SELECT * FROM doctor ORDER BY firstName ASC';
+if (isset($_POST['submit'])){
+	$answer = $_POST['radio'];
+	if ($answer == 'First Name Increasing'){
+		$query = "SELECT * FROM doctor ORDER BY firstName ASC";
 		$result = mysqli_query($connection,$query);
-		if (!$result) {
-			die("databases query failed.");
-		}
-		echo "<ol>";
-		while ($row = mysqli_fetch_assoc($result)) {
-			echo "<br>";
-			echo '<input type="radio" name="doctors" value=""';
-			echo $row["licenseNum"];
-			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
-		}
-		mysqli_free_result($result);
-		echo "</ol>";
-		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
+	}
+	elseif ($answer == 'First Name Decreasing'){
+		$query = "SELECT * FROM doctor ORDER BY firstName DESC";
+		$result = mysqli_query($connection,$query);
+	}
+	elseif ($answer == 'Last Name Increasing'){
+		$query = "SELECT * FROM doctor ORDER BY lastName ASC";
+		$result = mysqli_query($connection,$query);
+	}
+	elseif ($answer == 'Last Name Decreasing'){
+		$query = "SELECT * FROM doctor ORDER BY lastName DESC";
+		$result = mysqli_query($connection,$query);
 	}
 	
-	if(($_POST['radio'])=='First Name Decreasing') {
-		echo '<form action="displaydocinfo.php" method="POST">';
-		$query = 'SELECT * FROM doctor ORDER BY firstName DESC';
-		$result = mysqli_query($connection,$query);
-		if (!$result) {
-			die("databases query failed.");
-		}
-		echo "<ol>";
-		while ($row = mysqli_fetch_assoc($result)) {
-			echo "<br>";
-			echo '<input type="radio" name="doctors" value=""';
-			echo $row["licenseNum"];
-			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
-		}
-		mysqli_free_result($result);
-		echo "</ol>";
-		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
+	if (!$result) {
+		die("Databases query failed.");
 	}
-
-	if(($_POST['radio'])=='Last Name Increasing') {
-		echo '<form action="displaydocinfo.php" method="POST">';
-		$query = 'SELECT * FROM doctor ORDER BY lastName ASC';
-		$result = mysqli_query($connection,$query);
-		if (!$result) {
-			die("databases query failed.");
-		}
-		echo "<ol>";
-		while ($row = mysqli_fetch_assoc($result)) {
-			echo "<br>";
-			echo '<input type="radio" name="doctors" value=""';
-			echo $row["licenseNum"];
-			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
-		}
-		mysqli_free_result($result);
-		echo "</ol>";
-		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
+	echo '<form action="docInfo.php" method="POST">';
+	echo "<br>";	
+	echo "<ol>";
+	while ($row = mysqli_fetch_assoc($result)) {
+		echo '<input name="doc" type="radio" value="';
+		echo $row[docLicNum];
+		echo '">' . $row[firstName]. " " . $row[lastName];
+		echo "<br>";
 	}
-
-	if(($_POST['radio'])=='Last Name Decreasing') {
-		echo '<form action="displaydocinfo.php" method="POST">';
-		$query = 'SELECT * FROM doctor ORDER BY lastName DESC';
-		$result = mysqli_query($connection,$query);
-		if (!$result) {
-			die("databases query failed.");
-		}
-		echo "<ol>";
-		while ($row = mysqli_fetch_assoc($result)) {
-			echo "<br>";
-			echo '<input type="radio" name="doctors" value=""';
-			echo $row["licenseNum"];
-			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
-		}
-		mysqli_free_result($result);
-		echo "</ol>";
-		echo "<?php include'displaydocinfo.php' ?>";
-		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
-	}
+	mysqli_free_result($result);
+echo "</ol>";
+echo '<input name="info" type="submit" value="See info">';
+echo '</form>';
+echo "<br>";
+echo "<br>";
+echo '<form action = "Home.php" method = "get">';
+echo '<input type="submit" value = "Home Page">';
+echo '</form>';
 }
+
 ?>
 <?php
    mysqli_close($connection);
