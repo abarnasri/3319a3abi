@@ -11,7 +11,7 @@
 <body>
 <h1> Abarna's Doctor Database </h1>
 <br>
-Order Doctors by:
+	<b>Order Doctors by:</b>
 <form action="ordereddocs.php" method="post">
 <input name="radio" type="radio" value='First Name Increasing'>First Name Increasing
 <br>
@@ -27,9 +27,8 @@ Order Doctors by:
 </form>
 
 <br>
-Doctors Licensed Before A Certain Date:
+	<b>Doctors Licensed Before A Certain Date:</b>
 <form action="docslicbefore.php" method="post">
-<br>
 Enter Date (YYYY-MM-DD): <input type="text" name="date">
 <br>
 <form>
