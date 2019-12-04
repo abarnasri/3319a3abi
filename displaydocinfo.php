@@ -11,8 +11,8 @@ include 'connecttodb.php';
 <h1>Doctor Information:</h1>
 <ol>
 <?php
-	if (isset($_POST['submit'])){
-	$docLicenseNum= $_POST['submit];
+	if (isset($_POST['getinfo'])){
+	$docLicenseNum= $_POST['getinfo];
 	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.docLicNum="' . $docLicenseNum. '"';
 	$result=mysqli_query($connection,$query);
 	if (!$result) {
