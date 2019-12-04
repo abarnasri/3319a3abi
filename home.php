@@ -10,8 +10,6 @@
 </head>
 <body>
 <h1> Abarna's Doctor Database </h1>
-
-
 <br>
 Order Doctors by:
 <br>
