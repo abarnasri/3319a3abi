@@ -19,7 +19,7 @@ include 'connecttodb.php';
 	}
 	while ($row=mysqli_fetch_assoc($result)){
 		echo "<li>";
-		echo "<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] . " " . "<b>License No.: </b>" . " " . $row["licenseNum"] . " " . "<b>License Date: </b>" . " " . $row["licenseDate"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . " " . "<b>Hospital Name: </b>" . " " . $row["hospName"] . "</li>";
+		echo "<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] . " " . "<b>License No.: </b>" . " " . $row["docLicNum"] . " " . "<b>License Date: </b>" . " " . $row["licenseDate"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . " " . "<b>Hospital Name: </b>" . " " . $row["hosName"] . "</li>";
 		echo '<img src="'.$row["docimage"].'" height="80" width="80">';
 	}
 	mysqli_free_result($result);
