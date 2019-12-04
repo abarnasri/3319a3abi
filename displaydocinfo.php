@@ -8,28 +8,20 @@
 <?php
 include 'connecttodb.php';
 ?>
-<h1>Doctor Information:</h1>
-<ol>
-<?php
-	if (isset($_POST['getinfo'])){
-	$docLicenseNum= $_POST['getinfo'];
-	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hospID=hospital.hospCode AND doctor.docLicNum="' . $docLicenseNum. '"';
-	$result=mysqli_query($connection,$query);
-	if (!$result) {
-		die("Database query failed.");
-	}
-	while ($row=mysqli_fetch_assoc($result)){
-		echo "<li>";
-		echo '"<b>Doctor Name: </b>" . $row["firstName"] . " " . $row["lastName"] . " " . "<b>License No.: </b>" . " " . $row["licenseNum"] . " " . "<b>License Date: </b>" . " " . $row["licenseDate"] . " " . "<b>Specialty: </b>" . " " . $row["specialty"] . " " . "<b>Hospital Name: </b>" . " " . $row["hospName"] . "</li>"';
-		echo '<img src="'.$row["docimage"].'" height="80" width="80">';
-	}
-	mysqli_free_result($result);
-	}
+
+<php?
+	if (isset($_POST['info'])){
+		$docinfo = $_POST['info'];
+			$query = 'SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt = hospital.hosCode AND doctor.docLicNum ="'.$docinfo. '"';
+			$result=mysqli_query($connection,$query);
+		if (!$result) {
+         die("Database query failed.");
+		}
+		
+		echo '<h3 align =:"center">';
+		echo "Name: ". 
+		
 ?>
-</ol>
-<?php
-   mysqli_close($connection);
-?>
+		
 </body>
 </html>
-#this worksssss
