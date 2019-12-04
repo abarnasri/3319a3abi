@@ -15,22 +15,21 @@ include 'connecttodb.php';
 	
 if (isset($_POST['submit'])) { 
 	if(($_POST['radio'])=='First Name Increasing') {
-		echo '<form action="displaydocinfo.php" method="POST">';
 		$query = 'SELECT * FROM doctor ORDER BY firstName ASC';
 		$result = mysqli_query($connection,$query);
 		if (!$result) {
 			die("databases query failed.");
 		}
+		echo '<form action="displaydocinfo.php" method="POST">';
 		echo "<ol>";
 		while ($row = mysqli_fetch_assoc($result)) {
 			echo "<br>";
-			echo '<input type="radio" name="doctors" value=""';
+			echo '<input type="radio" name="doctors" value="';
 			echo $row["docLicNum"];
-			echo $row["firstName"] . " " . $row["lastName"] . "<br>";
+			echo '">' . $row["firstName"] . " " . $row["lastName"] . "<br>";
 		}
 		mysqli_free_result($result);
 		echo "</ol>";
-		echo "<?php include'displaydocinfo.php' ?>";
 		echo '<input name="getinfo" type="submit" value="Display Doctor Info">';
 	}
 	
