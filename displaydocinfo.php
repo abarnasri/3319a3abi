@@ -16,6 +16,7 @@ include 'connecttodb.php';
 	//do query
 	$query = 'SELECT * FROM doctor, hospital WHERE doctor.hosWorksAt=hospital.hosCode AND doctor.docLicNum="' . $docLicenseNum. '"';
 	$result=mysqli_query($connection,$query);
+	//if query fails
 	if (!$result) {
 		die("Database query failed.");
 	}
