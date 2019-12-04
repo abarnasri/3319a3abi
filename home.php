@@ -9,9 +9,6 @@
 	<link rel="stylesheet" type="text/css" href="asn3.css">
 </head>
 <body>
-<?php
-include 'connecttodb.php';
-?>
 <h1> Abarna's Doctor Database </h1>
 
 
