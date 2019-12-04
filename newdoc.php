@@ -12,18 +12,24 @@ include 'connecttodb.php';
 <h1>New Doctor:</h1>
 <ol>
 <?php
-  $firstName = $_POST["first"];
-  $lastName = $_POST["last"];
-  $spec = $_POST["speciality"];
-  $date = (string)$_POST["licenDate"];
-  $licNum = $_POST["LicenNum"];
-  $hosp = $_POST["hosp"];
-  
-
-
-
-
-
+	//based on previous input submit button from home page
+	$firstName = $_POST["first"];
+	$lastName = $_POST["last"];
+	$spec = $_POST["speciality"];
+	$date = (string)$_POST["licenDate"];
+	$licNum = $_POST["LicenNum"];
+	$hosp = $_POST["hosp"];
+	//do query
+	
+	
+	$query2 = 'INSERT INTO doctor VALUES("' . $licNum . '","' . $firstName . '","' . $lastName . '","' . $speciality . '", "' . $date . '", "'. $hosp .'", "' .$docimage. '")';
+	$result2=mysqli_query($connection,$query2);
+	//if query fails
+	if (!$result2) {
+		die("Database query failed.");
+	}
+	echo "Doctor Added.";
+	mysqli_close($connection);
 ?>
 </ol>
 <?php
