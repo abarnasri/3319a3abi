@@ -28,5 +28,19 @@ Order Doctors by:
 <input name="submit" type="submit" value="Order Doctors">
 </form>
 
+<br>
+Doctors Licensed Before A Certain Date:
+<br>
+<form action="docslicbefore.php" method="post">
+<br>
+Enter Date (YYYY-MM-DD): <input type="text" name="date">
+<br>
+<form>
+<input type="submit" value="Get Doctors Before This Date">
+</form>
+	
+	
+	
+
 </body>
 </html>
